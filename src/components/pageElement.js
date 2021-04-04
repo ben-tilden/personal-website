@@ -2,12 +2,13 @@ import React from 'react';
 
 function PageElement(props) {
 
-  const text = props.text
-  const isHeader = props.isHeader
+  const text = props.text;
+  const isFooter = props.isFooter;
+  const dropDownType = props.dropDownType;
 
   return (
-    <div className="App">
-        <div className={isHeader ? "page-element page-element-head" : "page-element"}>
+    <div className="page-element">
+        <div className={isFooter ? "page-element-plaque page-element-plaque-foot" : "page-element-plaque"}>
           <span className="page-element-text">
             {text}
           </span>

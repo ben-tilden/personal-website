@@ -5,18 +5,23 @@ import '../css/App.css';
 const pageElements = [
   {
     text : "Ben Tilden",
-    isHeader : true,
+    isFooter : false,
     dropDownType : "paragraph"
   },
   {
-    text : "",
-    isHeader : false,
+    text : "Hey there",
+    isFooter : false,
     dropDownType : "list"
   },
   {
-    text : "",
-    isHeader : false,
+    text : "Github Projects",
+    isFooter : false,
     dropDownType : "gallery"
+  },
+  {
+    text : "",
+    isFooter : true,
+    dropDownType : "none"
   }
 ]
 
@@ -27,14 +32,14 @@ function App() {
     pageElement =>
       <PageElement
         text={pageElement.text}
-        isHeader={pageElement.isHeader}
+        isFooter={pageElement.isFooter}
       />
   );
 
   return (
-    <>
+    <div className="page-element-container">
       {pageElementsComponents}
-    </>
+    </div>
   );
 }
 

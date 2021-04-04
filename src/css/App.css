@@ -19,7 +19,17 @@ html {
   font-size: calc(10px + 2vmin);
 }
 
-.page-element {
+.page-element-container {
+  position: absolute;
+  height: calc(100vh - 18px);
+  width: calc(100vw - 18px);
+  border: 9px solid white;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.page-element-plaque {
   width: auto;
   height: 100px;
   display: flex;
@@ -30,12 +40,15 @@ html {
   background-image: linear-gradient(black, black), 
   linear-gradient(white, white);
   background-clip: content-box, padding-box;
-  padding: 0px 9px 9px 9px;
+  padding-bottom: 9px;
   overflow: hidden;
+  cursor: pointer;
 }
 
-.page-element-head {
-  padding: 9px;
+.page-element-plaque-foot {
+  padding-bottom: 0px;
+  height: 218px;
+  cursor: default;
 }
 
 .page-element-text {
