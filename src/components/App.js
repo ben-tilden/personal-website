@@ -1,27 +1,30 @@
-import React, { useState, useEffect } from 'react';
 import PageElement from './pageElement.js'
 import '../css/App.css';
 
-const pageElements = [
+const pageElements = [/*TODO content type and dropdown type can likely be an object*/
   {
     text : "Ben Tilden",
     isFooter : false,
-    dropDownType : "paragraph"
+    contentType : "",
+    dropdownType : "paragraph"
   },
   {
     text : "Hey there",
     isFooter : false,
-    dropDownType : "list"
+    contentType : "",
+    dropdownType : "list"
   },
   {
     text : "Github Projects",
     isFooter : false,
-    dropDownType : "gallery"
+    contentType : "github",
+    dropdownType : "list"
   },
   {
     text : "",
     isFooter : true,
-    dropDownType : "none"
+    contentType : "",
+    dropdownType : "none"
   }
 ]
 
@@ -33,6 +36,9 @@ function App() {
       <PageElement
         text={pageElement.text}
         isFooter={pageElement.isFooter}
+        dropdownType={pageElement.dropdownType}
+        contentType={pageElement.contentType} /*TODO only need to pass down object here*/
+
       />
   );
 

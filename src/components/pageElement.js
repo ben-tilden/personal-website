@@ -1,19 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Dropdown from './dropdown.js'
 
 function PageElement(props) {
 
   const text = props.text;
   const isFooter = props.isFooter;
-  const dropDownType = props.dropDownType;
+  const dropdownType = props.dropdownType;
+  const contentType = props.contentType;
+
+  const [isDropped, setDropped] = useState(false)
 
   return (
     <div className="page-element">
-        <div className={isFooter ? "page-element-plaque page-element-plaque-foot" : "page-element-plaque"}>
-          <span className="page-element-text">
+        <div className={"page-element-plaque" + (isFooter ? " page-element-plaque-foot" : "")} onClick={() => setDropped(!isDropped)}>
+          <div className="page-element-text">
             {text}
-          </span>
+          </div>
         </div>
-        <div className="page-element-dropdown"></div>
+        {!isFooter && <Dropdown dropdownType={dropdownType} contentType={contentType} isDropped={isDropped} />}
     </div>
   );
 }
