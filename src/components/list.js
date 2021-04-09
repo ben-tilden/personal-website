@@ -33,13 +33,14 @@ function List(props) {
   /*TODO sort by date*/
   let itemsToRender = [];
   items.map(project => {
+    let rowClass = "project-item-info " + (itemsToRender.length === items.length - 1 ? "last-row" : "");
     itemsToRender.push(
-      <div key={project.node_id} className="project">
-        <p className="project-name">{project.name}</p>
-        <p className="project-updated">{new Date(project.updated_at).toLocaleString()}</p>
-        <p className="project-description">{project.description}</p>
-        <p className="project-language">{project.language}</p>
-      </div>
+      <>
+        <div className={rowClass + " date"}>{new Date(project.updated_at).toLocaleString().split(',')[0]}</div>
+        <div className={rowClass + " name"}>{project.name}</div>
+        <div className={rowClass + " desc"}>{project.description}</div>
+        <div className={rowClass + " lang"}>{project.language}</div>
+      </>
     );
     return itemsToRender;
   });

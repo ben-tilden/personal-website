@@ -7,6 +7,10 @@ function Dropdown(props) {
   const contentType = props.contentType;
   const isDropped = props.isDropped;
 
+  if (contentType === "github") {
+    var contentClass = "list-grid"
+  }
+
   var dropdownElement;
 
   if (dropdownType === "list") { /*TODO change name*/
@@ -15,7 +19,7 @@ function Dropdown(props) {
 
   return (
     <div className={"page-element-dropdown-container" + (isDropped ? " down" : " up")}>
-      <div className="page-element-dropdown">
+      <div className={"page-element-dropdown " + contentClass}>
         {dropdownElement}
       </div>
     </div>
