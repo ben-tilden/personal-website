@@ -1,5 +1,6 @@
 import React from 'react';
 import List from './list.js'
+import General from './general.js'
 
 function Dropdown(props) {
 
@@ -8,13 +9,17 @@ function Dropdown(props) {
   const isDropped = props.isDropped;
 
   if (contentType === "github") {
-    var contentClass = "list-grid"
+    var contentClass = "list-grid" /*TODO*/
+  } else if (contentType === "bullets") {
+    contentClass = "list-columns"
   }
 
   var dropdownElement;
 
-  if (dropdownType === "list") { /*TODO change name*/
+  if (dropdownType === "list") { /*TODO change name and review react semicolons*/
     dropdownElement = <List contentType={contentType} />
+  } else if (dropdownType === "general") {
+    dropdownElement = <General contentType={contentType} />
   }
 
   return (

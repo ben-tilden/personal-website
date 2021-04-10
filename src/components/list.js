@@ -19,10 +19,10 @@ function List(props) {
       .then(res => res.json())
       .then(resJSONList => {
         if (resJSONList) {
-          var itemsTempArr = []; /*change var name*/
+          var itemsTempArr = []; //change var name
           resJSONList.forEach(project => {
             itemsTempArr.push(project);
-          })
+          })/*TODO semicolon*/
           setItems(itemsTempArr);
         }
       })
@@ -30,7 +30,9 @@ function List(props) {
   }, [contentType]);
 
 
-  /*TODO sort by date*/
+  //TODO sort by date
+  //TODO format text to fit column limit here
+  //TODO update info on GitHub to clean up some of this
   let itemsToRender = [];
   items.map(project => {
     let rowClass = "project-item-info " + (itemsToRender.length === items.length - 1 ? "last-row" : "");

@@ -5,19 +5,19 @@ const pageElements = [/*TODO content type and dropdown type can likely be an obj
   {
     text : "Ben Tilden",
     isFooter : false,
-    contentType : "",
-    dropdownType : "paragraph"
-  },
-  {
-    text : "Hey there",
-    isFooter : false,
-    contentType : "",
-    dropdownType : "list"
+    contentType : "bullets",
+    dropdownType : "general"
   },
   {
     text : "Github Projects",
     isFooter : false,
     contentType : "github",
+    dropdownType : "list"
+  },
+  {
+    text : "Resume",
+    isFooter : false,
+    contentType : "",
     dropdownType : "list"
   },
   {

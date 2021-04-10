@@ -2,8 +2,10 @@
 
 html {
   background-color: black;
-  user-select: none;
+  /*user-select: none;*/ /*TODO review if this is necessary for all*/
 }
+
+/*TODO clean up overall*/
 
 .App {
   text-align: center;
@@ -85,17 +87,22 @@ html {
   transition: height .3s ease;
 }
 
-.list-grid {
+.list-grid {/*TODO name*/
   display: grid;
   grid-template-columns: .5fr [date] auto [name] 3fr [desc] .5fr [lang];
 }
 
-.project-item-info {
+.list-columns { /*TODO name*/
+  display: grid;
+  grid-template-columns: 1fr [column-0];
+}
+
+.project-item-info, .general-bullet {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex: 1 1 auto;
-  /*flex-direction: row;*/
+  /*flex-direction: row;*//*TODO review if this and other attributes are necessary*/
   padding-left: 7px;
   padding-right: 7px;
   padding-top: 3px;
@@ -116,7 +123,24 @@ html {
   border-bottom: 0px;
 }
 
+.general-bullet {
+  color:white;
+  font-family: 'Chivo', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
 .footer { /*TODO change name*/
   border-left: 0px;
   border-bottom: 0px;
+}
+
+li {
+  list-style-type: '﹡ ';/*＊﹡*/
+}
+
+a {
+  color: white;
 }
