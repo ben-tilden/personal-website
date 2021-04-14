@@ -2,7 +2,15 @@
 
 html {
   background-color: black;
-  /*user-select: none;*/ /*TODO review if this is necessary for all*/
+  user-select: none; /*TODO review if this is necessary for all*/
+}
+
+a {
+  color: white;
+}
+
+li {
+  list-style-type: '﹡ ';/*＊﹡*/
 }
 
 /*TODO clean up overall*/
@@ -87,17 +95,28 @@ html {
   transition: height .3s ease;
 }
 
-.list-grid {/*TODO name*/
+.bio-list { /*TODO name*/
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.resume-list { /*TODO name*/
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.2fr;
+}
+
+.skills-item {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  border-bottom: 4px;
+}
+
+.github-list {/*TODO name*/
   display: grid;
   grid-template-columns: .5fr [date] auto [name] 3fr [desc] .5fr [lang];
 }
 
-.list-columns { /*TODO name*/
-  display: grid;
-  grid-template-columns: 1fr [column-0];
-}
-
-.project-item-info, .general-bullet {
+.project-item-info, .bio-item, .skills-item, .company, .timing, .title, .bullets {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -115,32 +134,24 @@ html {
   font-weight: 700;
 }
 
-.date {
+/*.bio-item {
+  text-indent: -28px;
+  padding-left: 36px;
+}*/
+
+.bullets {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-indent: -28px;
+  padding-left: 36px;
+}
+
+.leftmost-column {
   border-left: 0px;
 }
 
 .last-row {
   border-bottom: 0px;
-}
-
-.general-bullet {
-  color:white;
-  font-family: 'Chivo', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  padding-top: 3px;
-  padding-bottom: 3px;
-}
-
-.footer { /*TODO change name*/
-  border-left: 0px;
-  border-bottom: 0px;
-}
-
-li {
-  list-style-type: '﹡ ';/*＊﹡*/
-}
-
-a {
-  color: white;
 }

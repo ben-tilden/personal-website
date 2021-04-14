@@ -5,28 +5,24 @@ const pageElements = [/*TODO content type and dropdown type can likely be an obj
   {
     text : "Ben Tilden",
     isFooter : false,
-    contentType : "bullets",
-    dropdownType : "general"
+    dropdownType : "bio"
   },
   {
     text : "Github Projects",
     isFooter : false,
-    contentType : "github",
-    dropdownType : "list"
+    dropdownType : "github"
   },
   {
     text : "Resume",
     isFooter : false,
-    contentType : "",
-    dropdownType : "list"
+    dropdownType : "resume"
   },
   {
     text : "",
     isFooter : true,
-    contentType : "",
     dropdownType : "none"
   }
-]
+];
 
 
 function App() {
@@ -36,8 +32,7 @@ function App() {
       <PageElement
         text={pageElement.text}
         isFooter={pageElement.isFooter}
-        dropdownType={pageElement.dropdownType}
-        contentType={pageElement.contentType} /*TODO only need to pass down object here*/
+        dropdownType={pageElement.dropdownType} /*NOTE1 - pass down object?*/
 
       />
   );
