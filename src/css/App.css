@@ -10,7 +10,7 @@ a {
 }
 
 li {
-  list-style-type: '﹡ ';/*＊﹡*/
+  list-style-type: '﹡ ';
 }
 
 /*TODO clean up overall*/
@@ -47,7 +47,6 @@ li {
   align-items: center;
   flex-direction: row;
   width: auto;
-  height: 100px;
   background-color: black;
   cursor: pointer;
 }
@@ -60,6 +59,8 @@ li {
 .page-element-text {
   color: white;
   padding-left: 1%;
+  padding-top: .175em;
+  padding-bottom: .175em;
   font-family: 'Chivo', sans-serif;
   font-size: 4em;
   font-weight: 700;
@@ -102,7 +103,7 @@ li {
 
 .resume-list { /*TODO name*/
   display: grid;
-  grid-template-columns: 2fr 2fr 1.2fr;
+  grid-template-columns: 1.8fr 2fr 1.2fr;
 }
 
 .skills-item {
@@ -134,18 +135,24 @@ li {
   font-weight: 700;
 }
 
-/*.bio-item {
-  text-indent: -28px;
-  padding-left: 36px;
-}*/
+.company, .timing, .title {
+  font-size: 25px;
+}
+
+.bio-item {
+  text-indent: -27px;
+  padding-left: 34px;
+}
 
 .bullets {
   grid-column-start: 1;
   grid-column-end: 4;
   display: grid;
   grid-template-columns: 1fr;
-  text-indent: -28px;
-  padding-left: 36px;
+  text-indent: -27px;
+  padding-left: 34px;
+  border-bottom: 3px solid white;
+  font-weight: 400;
 }
 
 .leftmost-column {
@@ -154,4 +161,8 @@ li {
 
 .last-row {
   border-bottom: 0px;
+}
+
+.skills-item {
+  font-size: 25px;
 }

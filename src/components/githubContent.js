@@ -9,7 +9,7 @@ function GithubContent() {
 
   const [items, setItems] = useState([]);
 
-  useEffect(() => { /* */
+  useEffect(() => { //currently only renders onMount, which probably is desired
     fetch(reposRequestUrl)
       .then(res => res.json())
       .then(resJSONList => {
