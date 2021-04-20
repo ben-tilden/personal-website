@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import '../css/githubContent.css';
+
 const githubRoot = "https://api.github.com/"
 const githubRequests = {
   repos : "users/ben-tilden/repos"
@@ -9,28 +11,23 @@ function GithubContent() {
 
   const [items, setItems] = useState([]);
 
-  useEffect(() => { //currently only renders onMount, which probably is desired
+  useEffect(() => { //currently only renders onMount
     fetch(reposRequestUrl)
       .then(res => res.json())
       .then(resJSONList => {
         if (resJSONList) {
-          var itemsTempArr = []; //change var name - do we need?
-          resJSONList.forEach(project => {
-            itemsTempArr.push(project);
-          });
-          itemsTempArr.sort((a, b) => {
+          resJSONList.sort((a, b) => {
             return (a.updated_at > b.updated_at) ? -1 : 1;
           });
-          setItems(itemsTempArr);
+          setItems(resJSONList);
         }
       })
       .catch((err) => console.log(err));
   }, []);
 
-  //TODO update info on GitHub to clean up some of this
   let itemsToRender = [];
   items.map(project => {
-    let rowClass = "project-item-info " + (itemsToRender.length === items.length - 1 ? "last-row" : "");
+    let rowClass = "project-item-data" + (itemsToRender.length === items.length - 1 ? " last-row" : " ");
     itemsToRender.push(
       <>
         <div className={rowClass + " date leftmost-column"}>{new Date(project.updated_at).toLocaleString().split(',')[0]}</div>

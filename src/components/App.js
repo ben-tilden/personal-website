@@ -1,7 +1,7 @@
 import PageElement from './pageElement.js'
 import '../css/App.css';
 
-const pageElements = [/*TODO content type and dropdown type can likely be an object*/
+const pageElements = [
   {
     text : "Ben Tilden",
     isFooter : false,

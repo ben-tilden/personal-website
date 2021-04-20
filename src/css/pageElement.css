@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&display=swap');
+
+.page-element-plaque {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: auto;
+  background-color: black;
+  cursor: pointer;
+}
+
+.page-element-plaque-foot {
+  height: 218px;
+  cursor: default;
+}
+
+.page-element-text {
+  color: white;
+  padding-left: 1%;
+  padding-top: .175em;
+  padding-bottom: .175em;
+  font-family: 'Chivo', sans-serif;
+  font-size: 4em;
+  font-weight: 700;
+}

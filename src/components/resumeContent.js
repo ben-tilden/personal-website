@@ -1,4 +1,6 @@
 import React from 'react';
+import '../css/resumeContent.css';
+
 const items = {
   skills : [
     "JS", "Java", "C#", "Python", "C", "HTML/CSS", "SQL", "Microsoft Office", "Adobe Creative Suite"
@@ -41,7 +43,7 @@ function ResumeContent() {
 
   let itemsToRender = [];
 
-  items.roles.forEach(role => { /*TODO map or forEach*/
+  items.roles.forEach(role => {
     Object.keys(role).forEach(key => {
       let itemClass = key;
       let itemContents = role[key];
@@ -49,12 +51,9 @@ function ResumeContent() {
       if (key === "title" || key === "bullets") {
         itemClass += " leftmost-column";
       }
-      if (items.roles.indexOf(role) === items.roles.length - 1 && key === "bullets") {
-        itemClass += "";
-      }
       if (key === "bullets") {
         itemContents = itemContents.map(bullet => {
-          return <div>{bullet}</div>;
+          return <div className="resume-info-bullet">{bullet}</div>;
         });
       }
 

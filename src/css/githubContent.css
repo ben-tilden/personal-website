@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&display=swap');
+
+.project-item-data {
+  display: flex;
+  align-items: center;
+  padding: 3px 7px;
+  color:white;
+  border-bottom: 3px solid white;
+  border-left: 3px solid white;
+  font-family: 'Chivo', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.leftmost-column {
+  border-left: 0px;
+}
+
+.last-row {
+  border-bottom: 0px;
+}

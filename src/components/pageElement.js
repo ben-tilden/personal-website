@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Dropdown from './dropdown.js'
+import '../css/pageElement.css';
 
 function PageElement(props) {
 

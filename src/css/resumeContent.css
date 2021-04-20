@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&display=swap');
+
+.skills-item {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  border-bottom: 4px;
+}
+
+.skills-item, .company, .timing, .title, .bullets {
+  display: flex;
+  align-items: center;
+  padding: 3px 7px;
+  color:white;
+  border-bottom: 3px solid white;
+  border-left: 3px solid white;
+  font-family: 'Chivo', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.company, .timing, .title, .skills-item {
+  font-size: 25px;
+}
+
+.bullets { /*Non-BEM, although not a guiding principle for these files at this point*/
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-indent: -27px;
+  padding-left: 34px;
+  font-weight: 400;
+}
+
+.leftmost-column {
+  border-left: 0px;
+}
+
+.last-row {
+  border-bottom: 0px;
+}

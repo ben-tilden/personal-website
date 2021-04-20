@@ -1,5 +1,7 @@
-import React from 'react'; /*TODO improve based on resumeContent */
-const items = [ /*NOTE3 - can this be done better? or does this work alright?*/
+import React from 'react';
+import '../css/bioContent.css';
+
+const items = [
   ["﹡ Works at the intersection of technology and user experience"],
   ["﹡ Troubleshoots professionally"],
   ["﹡ Feels strongly about social justice"],
@@ -13,16 +15,15 @@ const items = [ /*NOTE3 - can this be done better? or does this work alright?*/
 function BioContent() {
 
   let itemsToRender = [];
-  items.map(bullet => {
+  items.forEach(bullet => {
     let rowClass = "bio-item" + (itemsToRender.length === items.length - 1 ? " last-row" : "");
     itemsToRender.push(
       <div className={rowClass + " leftmost-column"}>
-        <span> {/*TODO add class name here if desired*/}
+        <span className="bio-item-bullet">
           {bullet}
         </span>
       </div>
     );
-    return itemsToRender;
   });
 
   return (
