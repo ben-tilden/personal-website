@@ -19,3 +19,19 @@
 .last-row {
   border-bottom: 0px;
 }
+
+.desc, .lang {
+  display: block;
+}
+
+@media only screen and (max-width: 816px) {
+  .desc {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .desc, .lang {
+    display: none;
+  }
+}

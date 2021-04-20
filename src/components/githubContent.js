@@ -27,7 +27,7 @@ function GithubContent() {
 
   let itemsToRender = [];
   items.map(project => {
-    let rowClass = "project-item-data" + (itemsToRender.length === items.length - 1 ? " last-row" : " ");
+    let rowClass = "project-item-data" + (itemsToRender.length === items.length - 1 ? " last-row" : "");
     itemsToRender.push(
       <>
         <div className={rowClass + " date leftmost-column"}>{new Date(project.updated_at).toLocaleString().split(',')[0]}</div>

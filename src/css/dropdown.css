@@ -33,10 +33,26 @@
 
 .resume-content {
   display: grid;
-  grid-template-columns: 1.8fr [company] 2fr [timing] 1.2fr [title];
+  grid-template-columns: 1.8fr [company] 2fr [title] 1.2fr [timing];
 }
 
 .github-content {
   display: grid;
   grid-template-columns: .5fr [date] auto [name] 3fr [desc] .5fr [lang];
+}
+
+@media only screen and (max-width: 816px) {  
+  .github-content {
+    grid-template-columns: 1fr [date] 1fr [name] 1fr [lang];
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .resume-content {
+    grid-template-columns: 2fr [company] 2fr [title] 1.2fr [timing];
+  }
+  
+  .github-content {
+    grid-template-columns: 1fr [date] 1fr [name];
+  }
 }
