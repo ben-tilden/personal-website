@@ -53,18 +53,18 @@ function ResumeContent() {
       }
       if (key === "bullets") {
         itemContents = itemContents.map(bullet => {
-          return <div className="resume-info-bullet">{bullet}</div>;
+          return <div key={bullet} className="resume-info-bullet">{bullet}</div>;
         });
       }
 
       itemsToRender.push(
-        <div className={itemClass}>{itemContents}</div>
+        <div key={role[key]} className={itemClass}>{itemContents}</div>
       );
     });
   });
 
   itemsToRender.push(
-    <div className="skills-item leftmost-column last-row">{"Skills: " + items.skills.join(", ")}</div>
+    <div key="skills" className="skills-item leftmost-column last-row">{"Skills: " + items.skills.join(", ")}</div>
   )
 
   return (

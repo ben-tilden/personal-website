@@ -28,13 +28,12 @@ function GithubContent() {
   let itemsToRender = [];
   items.map(project => {
     let rowClass = "project-item-data" + (itemsToRender.length === items.length - 1 ? " last-row" : "");
+    let projectDateString = new Date(project.updated_at).toLocaleString().split(',')[0]
     itemsToRender.push(
-      <>
-        <div className={rowClass + " date leftmost-column"}>{new Date(project.updated_at).toLocaleString().split(',')[0]}</div>
-        <div className={rowClass + " name"}>{project.name}</div>
-        <div className={rowClass + " desc"}>{project.description}</div>
-        <div className={rowClass + " lang"}>{project.language}</div>
-      </>
+      <div key={projectDateString + project.name} className={rowClass + " date leftmost-column"}>{projectDateString}</div>,
+      <div key={project.name} className={rowClass + " name"}>{project.name}</div>,
+      <div key={project.description} className={rowClass + " desc"}>{project.description}</div>,
+      <div key={project.language + project.name} className={rowClass + " lang"}>{project.language}</div>
     );
     return itemsToRender;
   });

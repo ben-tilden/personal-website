@@ -12,7 +12,7 @@ function PageElement(props) {
 
   return (
     <div className="page-element">
-        <div className={"page-element-plaque" + (isFooter ? " page-element-plaque-foot" : "")} onClick={() => setDropped(!isDropped)/*NOTE2 - is this clean?*/}>
+        <div className={"page-element-plaque" + (isFooter ? " page-element-plaque-foot" : "")} onClick={() => setDropped(!isDropped)}>
           <div className="page-element-text">
             {text}
           </div>
