@@ -8,7 +8,7 @@ const items = [
   ["﹡ Hopes to add a dropdown for 'Music', 'Writing', and/or 'Visual Arts' soon"],
   ["﹡ Loves collaborating! ", <a key="gmail" href="mailto:benntilden@gmail.com" target="_blank" rel="noopener noreferrer">benntilden@gmail.com</a>],
   ["﹡ Watches every Dallas Mavericks game"],
-  ["﹡ Has been listening to ", <a key="song" href="https://www.youtube.com/watch?v=k9fzUySXd-4">this song</a>, " a lot recently"],
+  ["﹡ Has been listening to ", <a key="song" href="https://www.youtube.com/watch?v=k9fzUySXd-4" target="_blank" rel="noopener noreferrer">this song</a>, " a lot recently"],
   ["﹡ Took inspiration liberally from other sites to create this"]
 ];
 

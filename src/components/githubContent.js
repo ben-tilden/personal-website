@@ -31,7 +31,7 @@ function GithubContent() {
     let projectDateString = new Date(project.updated_at).toLocaleString().split(',')[0]
     itemsToRender.push(
       <div key={projectDateString + project.name} className={rowClass + " date leftmost-column"}>{projectDateString}</div>,
-      <div key={project.name} className={rowClass + " name"}>{project.name}</div>,
+      <div key={project.name} className={rowClass + " name"}><a key={project.html_url} href={project.html_url} target="_blank" rel="noopener noreferrer">{project.name}</a></div>,
       <div key={project.description} className={rowClass + " desc"}>{project.description}</div>,
       <div key={project.language + project.name} className={rowClass + " lang"}>{project.language}</div>
     );
