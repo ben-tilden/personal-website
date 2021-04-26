@@ -11,7 +11,7 @@ function GithubContent() {
 
   const [items, setItems] = useState([]);
 
-  useEffect(() => { //currently only renders onMount
+  useEffect(() => {
     fetch(reposRequestUrl)
       .then(res => res.json())
       .then(resJSONList => {
@@ -26,7 +26,7 @@ function GithubContent() {
   }, []);
 
   let itemsToRender = [];
-  items.map(project => {
+  items.forEach(project => {
     let rowClass = "project-item-data" + (itemsToRender.length === items.length - 1 ? " last-row" : "");
     let projectDateString = new Date(project.updated_at).toLocaleString().split(',')[0]
     itemsToRender.push(
@@ -35,7 +35,6 @@ function GithubContent() {
       <div key={project.description} className={rowClass + " desc"}>{project.description}</div>,
       <div key={project.language + project.name} className={rowClass + " lang"}>{project.language}</div>
     );
-    return itemsToRender;
   });
 
   return (

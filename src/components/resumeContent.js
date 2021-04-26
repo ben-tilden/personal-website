@@ -11,8 +11,12 @@ const items = {
       company : "Flatiron Health",
       timing : "Jan. 2020 - Present",
       bullets : [
-        "﹡ Works",
-        "﹡ Works more"
+        "﹡ Investigate and resolve over 600 client-reported technical issues and requests regarding the company's EMR application using product knowledge, SQL updates, built-in JavaScript functionality, user authentication management, and review of third party API integration",
+        "﹡ Troubleshoot complex software issues involving both frontend and backend logic by studying Splunk logs and a codebase comprised of C#, JS, React, VB, and SQL",
+        "﹡ Collaborate cross-functionally with support team, account managers, product managers, and software engineers to actively define timelines, priorities, and solutions for customer reported bugs",
+        "﹡ Customize and put into effect tools such as Datadog and New Relic to monitor system performance and contextualize other client interactions",
+        "﹡ Build out internal tools using C# and SQL to allow broader usage of technical actions within the 35 person support team",
+        "﹡ Perform 35 mass database updates for clients using in-depth SQL queries"
       ]
     },
     {
