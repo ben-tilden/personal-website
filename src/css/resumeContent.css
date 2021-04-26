@@ -20,7 +20,7 @@
   font-size: 25px;
 }
 
-.bullets { /*Non-BEM, although not a guiding principle for these files at this point*/
+.bullets {
   grid-column-start: 1;
   grid-column-end: 4;
   display: grid;
