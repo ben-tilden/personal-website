@@ -27,7 +27,9 @@ function GithubContent() {
 
   let itemsToRender = [];
   items.forEach(project => {
-    let rowClass = "project-item-data" + (itemsToRender.length === items.length - 1 ? " last-row" : "");
+    console.log(itemsToRender.length)
+    console.log(items.length - 1)
+    let rowClass = "project-item-data" + (itemsToRender.length === (items.length - 1) * 4 ? " last-row" : "");
     let projectDateString = new Date(project.updated_at).toLocaleString().split(',')[0]
     itemsToRender.push(
       <div key={projectDateString + project.name} className={rowClass + " date leftmost-column"}>{projectDateString}</div>,
