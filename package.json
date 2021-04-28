@@ -1,6 +1,6 @@
 {
   "name": "personal_website",
-  "homepage": "https://www.ben-tilden.com",
+  "homepage": "http://www.ben-tilden.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

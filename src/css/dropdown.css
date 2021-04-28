@@ -54,3 +54,9 @@
     grid-template-columns: 1fr [date] 1fr [name];
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .resume-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
