@@ -1,6 +1,5 @@
 .page-element-dropdown-container {
   width: auto;
-  height: 250px;
   overflow: hidden;
 }
 
@@ -22,6 +21,10 @@
 .dropped {
   height: 250px;
   transition: height .3s ease;
+}
+
+.resume-container.dropped {
+  height: 375px;
 }
 
 .bio-content {

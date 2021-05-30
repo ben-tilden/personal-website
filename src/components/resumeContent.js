@@ -11,12 +11,11 @@ const items = {
       company : "Flatiron Health",
       timing : "Jan. 2020 - Present",
       bullets : [
-        "﹡ Investigate and resolve over 600 client-reported technical issues and requests regarding the company's EMR application using product knowledge, SQL updates, built-in JavaScript functionality, user authentication management, and review of third party API integration",
-        "﹡ Troubleshoot complex software issues involving both frontend and backend logic by studying Splunk logs and a codebase comprised of C#, JS, React, VB, and SQL",
-        "﹡ Collaborate cross-functionally with support team, account managers, product managers, and software engineers to actively define timelines, priorities, and solutions for customer reported bugs",
+        "﹡ Unblock clients by investigating and resolving over 600 technical issues and requests regarding the company's EMR application. This involves writing SQL scripts, coding user-facing alerts in JS, managing user authentication, and query- ing third party APIs to debug error codes",
+        "﹡ Solve complex software issues by reviewing Splunk logs and actively debugging in a codebase comprised of C#, JS, React, VB, and SQL",
+        "﹡ Build internal tools in C# and SQL to enable a non-technical 35 person customer support team to quickly and efficiently look up customer billing information",
         "﹡ Customize and put into effect tools such as Datadog and New Relic to monitor system performance and contextualize other client interactions",
-        "﹡ Build out internal tools using C# and SQL to allow broader usage of technical actions within the 35 person support team",
-        "﹡ Perform 35 mass database updates for clients using in-depth SQL queries"
+        "﹡ Collaborate cross-functionally with support team, account managers, product managers, and software engineers to establish priorities, define timelines, and implement solutions for customer reported bugs"
       ]
     },
     {

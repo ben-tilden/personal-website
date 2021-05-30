@@ -9,13 +9,15 @@ function Dropdown(props) {
   const dropdownType = props.dropdownType;
   const isDropped = props.isDropped;
 
-  var contentClass;
-  var dropdownElement;
+  let isResume = false;
+  let contentClass;
+  let dropdownElement;
 
   if (dropdownType === "bio") {
     contentClass = " bio-content";
     dropdownElement = <BioContent />;
   } else if (dropdownType === "resume") {
+    isResume = true;
     contentClass = " resume-content";
     dropdownElement = <ResumeContent />;
   } else if (dropdownType === "github") {
@@ -24,7 +26,7 @@ function Dropdown(props) {
   }
 
   return (
-    <div className={"page-element-dropdown-container" + (isDropped ? " dropped" : " notDropped")}>
+    <div className={"page-element-dropdown-container" + (isResume ? " resume-container" : "") + (isDropped ? " dropped" : " notDropped")}>
       <div className={"page-element-dropdown" + contentClass}>
         {dropdownElement}
       </div>
