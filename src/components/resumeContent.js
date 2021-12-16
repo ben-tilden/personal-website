@@ -7,9 +7,15 @@ const items = {
   ],
   roles : [
     {
+      title : "Software Engineer",
+      company : "Blue Apron",
+      timing : "Dec. 2021 - Present",
+      bullets : []
+    },
+    {
       title : "Associate Technical Solutions Engineer",
       company : "Flatiron Health",
-      timing : "Jan. 2020 - Present",
+      timing : "Jan. 2020 - Dec. 2021",
       bullets : [
         "﹡ Unblock clients by investigating and resolving over 600 technical issues and requests regarding the company's EMR application. This involves writing SQL scripts, coding user-facing alerts in JS, managing user authentication, and query- ing third party APIs to debug error codes",
         "﹡ Solve complex software issues by reviewing Splunk logs and actively debugging in a codebase comprised of C#, JS, React, VB, and SQL",
