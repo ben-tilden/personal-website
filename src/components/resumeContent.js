@@ -60,15 +60,17 @@ function ResumeContent() {
       if (key === "title" || key === "bullets") {
         itemClass += " leftmost-column";
       }
-      if (key === "bullets") {
+      if (key === "bullets" && itemContents.length) {
         itemContents = itemContents.map(bullet => {
           return <div key={bullet} className="resume-info-bullet">{bullet}</div>;
         });
       }
-
-      itemsToRender.push(
-        <div key={role[key]} className={itemClass}>{itemContents}</div>
-      );
+      
+      if (itemContents.length) {
+        itemsToRender.push(
+          <div key={role[key]} className={itemClass}>{itemContents}</div>
+        );
+      }
     });
   });
 
