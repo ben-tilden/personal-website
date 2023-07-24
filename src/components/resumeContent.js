@@ -3,14 +3,21 @@ import '../css/resumeContent.css';
 
 const items = {
   skills : [
-    "JS", "Java", "C#", "Python", "C", "HTML/CSS", "SQL", "Microsoft Office", "Adobe Creative Suite"
+    "Ruby on Rails", "JavaScript (React, Ember.js)", "Java", "C#", "Python", "C", "HTML/CSS", "SQL", "Kafka", "gRPC", "Docker", "Unix", "Datadog", "Microsoft Office", "Adobe Creative Suite"
   ],
   roles : [
     {
       title : "Software Engineer",
       company : "Blue Apron",
       timing : "Dec. 2021 - Present",
-      bullets : []
+      bullets : [
+        "﹡ Architect, implement, and maintain features in Ruby on Rails and JavaScript (React, Ember.js) as a member of the Ingredients team which is responsible for a series of 10 microservices in the company’s recipe ideation, ingredient purchasing, and warehouse management pipeline",
+        "﹡ Designed and built out a high-usage inventory reconciliation tool for ensuring inventory accuracy in Blue Apron's fulfillment center, successfully leading the team to levels of 95% physical-to-digital accuracy",
+        "﹡ Optimized recipe forecasting data pipeline by setting up a Kafka processing framework in the team's data pooling service, deprecating a legacy job pulling daily from S3 and allowing for immediate updates of mission critical data",
+        "﹡ Collaborate with other engineers and product managers in an Agile environment - actively participating at every point in the software development lifecycle, from planning, development, and testing to code review and release monitoring over the course of two week sprints",
+        "﹡ Proactively identify tech debt throughout the team's software infrastructure (duplicated and deprecated code, suboptimal implementations, etc.) and work with manager to prioritize while upholding current sprint velocity",
+        "﹡ Investigate and resolve urgent stakeholder requests regarding day-to-day operations from within the test kitchen to the fulfillment center while on the team's on-call shift twice a quarter"
+      ]
     },
     {
       title : "Associate Technical Solutions Engineer",
@@ -65,7 +72,7 @@ function ResumeContent() {
           return <div key={bullet} className="resume-info-bullet">{bullet}</div>;
         });
       }
-      
+
       if (itemContents.length) {
         itemsToRender.push(
           <div key={role[key]} className={itemClass}>{itemContents}</div>
