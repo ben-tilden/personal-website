@@ -17,7 +17,7 @@ function GithubContent() {
       .then(resJSONList => {
         if (resJSONList) {
           resJSONList.sort((a, b) => {
-            return (a.updated_at > b.updated_at) ? -1 : 1;
+            return (Number(a.archived) - Number(b.archived)) || (Date.parse(b.updated_at) - (Date.parse(a.updated_at)));
           });
           setItems(resJSONList);
         }
@@ -32,7 +32,7 @@ function GithubContent() {
     let rowClass = "project-item-data" + (itemsToRender.length === (items.length - 1) * 4 ? " last-row" : "");
     let projectDateString = new Date(project.updated_at).toLocaleString().split(',')[0]
     itemsToRender.push(
-      <div key={projectDateString + project.name} className={rowClass + " date leftmost-column"}>{projectDateString}</div>,
+      <div key={projectDateString + project.name} className={rowClass + " date leftmost-column"}>{projectDateString}{project.archived && "\n(archived)"}</div>,
       <div key={project.name} className={rowClass + " name"}><a key={project.html_url} href={project.html_url} target="_blank" rel="noopener noreferrer">{project.name}</a></div>,
       <div key={project.description} className={rowClass + " desc"}>{project.description}</div>,
       <div key={project.language + project.name} className={rowClass + " lang"}>{project.language}</div>
