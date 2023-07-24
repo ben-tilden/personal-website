@@ -1,6 +1,6 @@
 {
   "name": "personal_website",
-  "homepage": "http://www.ben-tilden.com",
+  "homepage": "https://www.ben-tilden.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,7 +19,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "//": "reminder: git run deploy is all that's needed to build and deploy"
+    "//": "reminder: npm run deploy is all that's needed to build and deploy - wait and confirm via github actions"
   },
   "eslintConfig": {
     "extends": [
